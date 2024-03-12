@@ -1,0 +1,76 @@
+今天我有一個專案環境狀況如下:
+程式開發工具： Visual Studio 2022
+程式語言： C#
+專案使用： ASP.NET Core Web API
+專案架構： .NET Core 2.1
+
+SQL Server中我有4張資料要表如下：
+資料表Dept
+DeptNo 部門代碼，DeptName 部門名稱
+
+資料表Employee
+EmpNo 員工編號，EmpName 員工姓名，Sex 員工性別，DeptNo 所屬部門代號，Salary 薪水，Birth 生日
+
+資料表Absent
+AbsType 假別代碼，AbsName 假別名稱
+
+資料表AbsDetail
+EmpNo 請假員工編號，AbsType 假別代碼，AbsDate 請假日期，ABsHour 請假時數
+
+根據需求內容，下面會分成幾個部分詳細敘述
+一. 程式框架資訊如下:
+1. 四個資料夾 Controllers Models Helpers Services
+2. 環境變數檔 settings.json settings.Development.json settings.Prod.json
+3. 在 LaunchSettings.json 中分別設定讀取不同的環境變數檔
+4. 建立 log4net.config ，並將 log 紀錄存放至 D: Logs Log4Net 底下
+5. 需要有 Middleware.cs 用於紀錄 API 資訊， Filter 控制有無授權
+6. 建立用於存放資料庫模型的類別庫 員編 TestDB
+
+二. Controllers資料夾要求如下:
+1. APIControllerBase.cs : 需建構函式，並注入員編 TestDBContext 及 claim 等
+2. 當進入任一支 API 時，在 LOG 紀錄當前版本號及 IP 位置
+3. Controller: 需繼承 APIControllerbase 的建構函式
+• DeptController.cs
+• EmployeeController.cs
+• AbsentController.cs
+
+三. DEPTCONTROLLER.CS
+1. 可以列出所有部門
+2. 可以新增刪除修改部門
+3. 可以列出全部部門底下全部員工
+4. 可以列出某個部門底下全部員工
+5. 共六支 API
+
+四. EMPLOYEECONTROLLER.CS
+1. 可以新增刪除修改員工 比如調整員工部門
+2. 可以試算員工幾年後的薪資
+3. 共四支 API
+
+五. ABSENTCONTROLLER.CS
+1. 可以讓員工請公假
+2. 可以讓員工請事假
+3. 可以讓員工請病假
+4. 可以讓員工查詢請了多少假
+5. 共四支 API
+
+六. Models資料夾
+1. Response.cs : 用於統一回傳格式
+2. Settings.cs : 用於強型別
+
+七. Helpers資料夾
+1. SalaryHelper.cs : 透過該 Helper 可以試算員工薪資
+• 依照年資一年加 1000 ，女性多 500 ，部門代號為奇數則乘以 1.2
+• 最低不得低於 25000
+2. AbsentHelper.cs : 透過該 Helper 可以判斷員工能否請假
+• 依照部門奇數可請三天公假 一天病假，偶數則是只能請一天公假
+• 女性比男性多一天公假
+
+八. Services資料夾
+1. laimAccessor.cs 用於存放環境變數檔及 Request 的資料
+2. 環境變數裡有的資料
+• 每個員工的 Token
+• 薪資條件的值 比如年資一年多一千的一千
+• 公假病假的天數
+• 當前版本號
+
+依據上面的需求建立詳細又完整的專案內容
