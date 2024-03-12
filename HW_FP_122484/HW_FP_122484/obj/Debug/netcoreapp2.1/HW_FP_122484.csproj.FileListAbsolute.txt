@@ -1,0 +1,7 @@
+C:\Users\mochi\Downloads\HW_FP_122484\HW_FP_122484\obj\Debug\netcoreapp2.1\HW_FP_122484.csproj.AssemblyReference.cache
+C:\Users\mochi\Downloads\HW_FP_122484\HW_FP_122484\obj\Debug\netcoreapp2.1\HW_FP_122484.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mochi\Downloads\HW_FP_122484\HW_FP_122484\obj\Debug\netcoreapp2.1\HW_FP_122484.AssemblyInfoInputs.cache
+C:\Users\mochi\Downloads\HW_FP_122484\HW_FP_122484\obj\Debug\netcoreapp2.1\HW_FP_122484.AssemblyInfo.cs
+C:\Users\mochi\Downloads\HW_FP_122484\HW_FP_122484\obj\Debug\netcoreapp2.1\HW_FP_122484.csproj.CoreCompileInputs.cache
+C:\Users\mochi\Downloads\HW_FP_122484\HW_FP_122484\obj\Debug\netcoreapp2.1\HW_FP_122484.RazorAssemblyInfo.cache
+C:\Users\mochi\Downloads\HW_FP_122484\HW_FP_122484\obj\Debug\netcoreapp2.1\HW_FP_122484.RazorAssemblyInfo.cs
