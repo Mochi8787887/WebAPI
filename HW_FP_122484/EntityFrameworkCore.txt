@@ -1,0 +1,15 @@
+參考網站:
+https://ithelp.ithome.com.tw/articles/10262110
+https://blog.talllkai.com/ASPNETCore/2021/04/13/DatabaseFirst
+
+連線字串:
+Scaffold-DbContext "Server=10.11.37.148;Database=TrainDB122484;User ID=122484;Password=122484" Microsoft.EntityFrameworkCore.SqlServer -OutputDir TrainDB122484.Data -Force
+
+程式開發工具： Visual Studio 2022
+程式語言： C#
+專案使用： ASP.NET Core Web API
+專案架構： .NET Core 2.1
+
+套件版本(Version: 2.1.14)
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
